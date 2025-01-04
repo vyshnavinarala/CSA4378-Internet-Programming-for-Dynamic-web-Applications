@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bio Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="date"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            width: 48%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <form action="Edu.html" method="get">
+        <h1>BIO-DATA</h1>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="Name" required>
+
+        <label for="dob">DOB</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label>Gender</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <input type="radio" id="transgender" name="gender" value="Transgender">
+        <label for="transgender">Transgender</label>
+
+        <label for="occupation">Occupation</label>
+        <select id="occupation" name="Occupation" required>
+            <option value="Student">Student</option>
+            <option value="Teacher">Teacher</option>
+            <option value="Employee">Employee</option>
+        </select>
+
+        <label>Hobbies</label>
+        <input type="checkbox" id="reading" name="hobbies" value="Reading">
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="cooking" name="hobbies" value="Cooking">
+        <label for="cooking">Cooking</label>
+        <input type="checkbox" id="playing" name="hobbies" value="Playing">
+        <label for="playing">Playing</label>
+
+        <div class="button-group">
+            <button type="submit">Submit</button>
+            <button type="reset">Cancel</button>
+        </div>
+    </form>
+</body>
+</html>
