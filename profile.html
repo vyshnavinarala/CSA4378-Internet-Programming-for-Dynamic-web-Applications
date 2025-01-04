@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <title>Profile Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .profile-card {
+            width: 300px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+        }
+        .profile-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .profile-card h2 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+        }
+        .profile-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            background-color: green;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <img id="profile-picture" src="C:\Users\vyshn\OneDrive\Documents\p.jpeg" alt="Profile Picture">
+        <h2 id="profile-name"></h2>
+        <p id="profile-bio"></p>
+        <div class="social-links">
+            <a id="social-link-1" href="#" target="_blank">Link 1</a>
+            <a id="social-link-2" href="#" target="_blank">Link 2</a>
+            <a id="social-link-3" href="#" target="_blank">Link 3</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const profileData = {
+                name: "Alice",
+                bio: "Web developer and designer passionate about creating user-friendly applications.",
+                profilePicture: "https://via.placeholder.com/100",
+                socialLinks: [
+                    "https://twitter.com",
+                    "https://linkedin.com",
+                    "https://github.com"
+                ]
+            };
+
+            document.getElementById("profile-name").textContent = profileData.name;
+            document.getElementById("profile-bio").textContent = profileData.bio;
+            document.getElementById("profile-picture").src = profileData.profilePicture;
+
+            const socialLinks = document.querySelectorAll(".social-links a");
+            socialLinks[0].href = profileData.socialLinks[0];
+            socialLinks[1].href = profileData.socialLinks[1];
+            socialLinks[2].href = profileData.socialLinks[2];
+        });
+    </script>
+</body>
+</html>
